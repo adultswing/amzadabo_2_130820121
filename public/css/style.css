@@ -1,0 +1,40 @@
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+:root {
+    --colorRed: red;
+    --colorGreen: Green;
+    --colorBlue: #0065FC;
+    --colorClair: #DEEBFF;
+    --colorGrey: #F2F2F2;
+}
+
+body {
+    background-color: var(--colorBlue);
+    color: var(--colorClair);
+    font-family: "Raleway", monospace;
+}
+
+i {
+    font-size: 40px;
+    color: var(--colorGreen);
+}
+
+
+/* size tablettes */
+
+@media screen and (min-width: 600px) and (max-width: 1080px) {
+    body {
+        background-color: var(--colorRed);
+    }
+}
+
+
+/*Size mobile*/
+
+@media screen and (max-width: 599px) {
+    body {
+        background-color: var(--colorGreen);
+    }
+}
