@@ -16,18 +16,48 @@ body {
     font-family: "Raleway", monospace;
 }
 
-i {
-    font-size: 40px;
-    color: var(--colorGreen);
+body {
+    background-color: var(--colorRed);
 }
 
+#container {
+    background-color: #DEEBFF;
+    color: black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr 4fr 4fr 1fr;
+    grid-template-areas: "header header" "main main" "article1 aside" "article2 article2" "footer footer";
+    height: 100vh;
+}
 
-/* size tablettes */
+header {
+    background-color: aquamarine;
+    grid-area: header;
+}
 
-@media screen and (min-width: 600px) and (max-width: 1080px) {
-    body {
-        background-color: var(--colorRed);
-    }
+main {
+    background-color: coral;
+    grid-area: main;
+}
+
+article.article1 {
+    background-color: darkmagenta;
+    grid-area: article1;
+}
+
+aside {
+    background-color: burlywood;
+    grid-area: aside;
+}
+
+article.aricle2 {
+    background-color: rgb(17, 0, 255);
+    grid-area: article2;
+}
+
+footer {
+    background-color: deeppink;
+    grid-area: footer;
 }
 
 
@@ -36,5 +66,10 @@ i {
 @media screen and (max-width: 599px) {
     body {
         background-color: var(--colorGreen);
+    }
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header" "main" " aside" "article1" " article2" "footer ";
     }
 }
